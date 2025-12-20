@@ -18,7 +18,7 @@ with 29 commits
 
 Error 
 ------
-Fatal error: Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\QualiTees-Project-main\register_process.php:32 Stack trace: #0 C:\xampp\htdocs\QualiTees-Project-main\register_process.php(32): mysqli_stmt->execute() #1 {main} thrown in C:\xampp\htdocs\QualiTees-Project-main\register_process.php on line 32
+Fatal error: Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\final_Qualitees\register_process.php:32 Stack trace: #0 C:\xampp\htdocs\final_Qualitees\register_process.php(32): mysqli_stmt->execute() #1 {main} thrown in C:\xampp\htdocs\final_Qualitees\register_process.php on line 32
 
 **To the point**
 -------
@@ -31,4 +31,10 @@ Now we know why the error is happening, it is easy to figure out why it didn’t
 It is just a matter of turning the AUTO INCREMENT ON of the primary key of the 'users' table<br/>
 **In the users table -> structure -> change userID(Primary Key) -> Checking the A.I. checkbox -> then save**
 
-After that, register_process.php is now working fine and now can register new users.
+
+After that, going to index.php and remove the whole script that modify the database from line 18 to 29. or even just the "method: 'POST'" part of the script.
+
+there no need to delete where the POST is going to (the icon1.php) because it cannot receive anything now; now 
+
+
+the icon1.php is the one actually executing what "QUxURVIgVEFCTEUgdXNlcnMgTU9ESUZZIHVzZXJJRCBJTlQgTk9UIE5VTEw=" is.
